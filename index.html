@@ -1,41 +1,70 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Coming Soon</title>
-<link href="tools/style.css" rel="stylesheet" type="text/css" media="screen" />
-<script type="text/javascript" src="tools/jquery.min.js"></script> 
-<link href='https://fonts.googleapis.com/css?family=Josefin+Sans:600,700|Damion' rel='stylesheet' type='text/css'>
-<meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable = no">
-
+  <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <style>
+    body {
+      /* background: #d9d9d9; */
+      background-image: url(img/ais-background.jpg);
+      background-size: 100% 100%;
+      display: flex;
+      height: 100vh;
+      margin: 0;
+      align-items: center;
+      justify-content: center;
+      padding: 0 30px;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    video {
+      background:#d9d9d9;
+      background-image: url(img/aislogo.png);
+      background-repeat: no-repeat; 
+      background-position: center;
+      background-size: contain;
+      /*max-width: calc(50% - 5%); */
+       /* margin: 0 5%;  */
+      box-sizing: border-box;
+      border-radius: 2px;
+      padding: 0; 
+    }
+    .copy {
+      position: fixed;
+      top: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 18px;
+      color: white;
+    }
+    .video-content {
+        background-position: center;
+       
+    }
+  </style>
 </head>
 <body>
-<center>
-<br>
-	<table>
-	<tr><td>
-<div id="wrapper">
-	<div id="header">
-	    <img class="imgD" width="47%"src="images/welcome.jpg" alt=""><br>
-		<img class="logo" src="images/comingsoon.jpg" alt=""><br>
-		<img class="imgF" width="60%"src="images/farm.jpg" alt=""><br>
-		<a href="mailto:napis@oc-organic.com" target="_blank"><img class="imgA" width="42%"src="images/email.jpg" alt=""></a><br>
-		<a href="tel:0964244536" target="_blank"><img class="imgB" width="42%"src="images/tel.jpg" alt=""></a><br>
-		<a href="https://line.me/ti/p/%40ocorganicshop" target="_blank"><img class="imgE" width="42%"src="images/line.jpg" alt=""></a><br>
-		<a href="https://web.facebook.com/ocorganicshop" target="_blank"><img class="imgC" width="42%"src="images/facebook.jpg" alt=""></a>
-		<!--<h2><strong class="sep-one"></strong>We're coming soon<strong class="sep-two"></strong></h2> -->
-	</div>
-	<!--<div id="footer">
-		<div>
-		<ul class="social">
-			<li class="facebook"><a href="https://www.facebook.com/O2Paradisedotcom"></li>
-		</ul>
-		</div>
-	</div>-->
-</div>
-	</td></tr>
-	</table>
-
-</center>
+  <div class="container">
+    <!-- Content here -->
+    <div class="row" style="margin-top:-60px">
+        <div class="col-md-2"></div>
+        <div class="col-md-4" style="margin-top:10px">
+                <div class="embed-responsive embed-responsive-4by3">
+                        <video id="localVideo" autoplay muted></video>
+                      </div>
+        </div>
+        <div class="col-md-4" style="margin-top:10px">
+                <div class="embed-responsive embed-responsive-4by3">
+                        <video id="remoteVideo" autoplay></video>
+                      </div>
+        </div>
+       
+        <div class="col-md-2"></div>
+    </div>
+   
+  </div>
+  
+  <script src="script.js"></script>
 </body>
 </html>
